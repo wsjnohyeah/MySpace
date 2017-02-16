@@ -28,6 +28,7 @@ class PostController extends Controller{
 
 	public function savePost(Request $request){
 		if($request->session()->get('logged')){
+			date_default_timezone_set("Etc/GMT-8");
 			$title = Input::get('title');
 			$content = Input::get('content');
 			Posts::create([
@@ -40,6 +41,7 @@ class PostController extends Controller{
 
 	public function editPost(Request $request){
 		if($request->session()->get('logged')){
+			date_default_timezone_set("Etc/GMT-8");
 			$id = Input::get('id');
 			$title = Input::get('title');
 			$content = Input::get('content');

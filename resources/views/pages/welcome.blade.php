@@ -27,7 +27,8 @@
         						 <label class="active" >Title</label>
                          </div>
                          <div class="input-field col s12">
-                         	 <textarea name="content" id="post-content"></textarea>
+                         	 <textarea class="materialize-textarea white-text" name="content" id="post-content"></textarea>
+                             <label>Content</label>
                          </div>
                      </div>	
                  </div>
@@ -59,25 +60,4 @@
     @endforeach
 
 </div>
-@endsection
-
-@section('scripts')
-    @if($logged)
-        <script type="text/javascript" src="{{makeUrl('')}}tinymce/tinymce.min.js"></script>
-        <script>
-            tinymce.init({ 
-                selector: 'textarea',
-                height: 300,
-                menubar: false,
-                plugins: [
-                'advlist autolink lists link image charmap print preview anchor',
-                'searchreplace visualblocks code fullscreen',
-                'insertdatetime media table contextmenu paste code textcolor'
-                ],
-                toolbar: 'undo redo | insert | styleselect | bold underline italic | alignleft aligncenter alignright alignjustify | outdent indent | link image | forecolor backcolor',
-                content_css: '//www.tinymce.com/css/codepen.min.css',
-                image_dimensions: false,
-            });
-        </script>
-    @endif
 @endsection

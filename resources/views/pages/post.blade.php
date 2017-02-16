@@ -25,8 +25,9 @@
         						 <label class="active" >Title</label>
                          </div>
                          <div class="input-field col s12">
-                         	 <textarea name="content" id="post-content">{{$post->content}}</textarea>                         </div>
-                     </div>	
+                            <textarea class="materialize-textarea white-text" name="content" id="post-content">{!!$post->content!!}</textarea>
+                            <label>Content</label>                     
+                        </div>	
                  </div>
                  <div class="card-action">
                      <button class="btn waves-effect waves-light blue" type="submit" name="action">Edit
@@ -47,7 +48,7 @@
                     <div class="row">
                     	<div class="col s12 flow-text white-text">{{$post->title}}</div>
                     </div>
-                    <p align="justify" class="white-text">{!! $post->content !!}</p>
+                    <div align="justify" class="white-text">{!! processPost($post->content) !!}</div>
                     <br>
                    	<p align="right" class="green-text text-lighten-3">Last updated at {{date('Y/n/j G:i', strtotime($post->updated_at))}}</p>
                 </div>
@@ -59,22 +60,10 @@
 @endsection
 
 @section('scripts')
-    @if($logged)
-        <script type="text/javascript" src="{{makeUrl('')}}tinymce/tinymce.min.js"></script>
+        <script type="text/javascript" src="{{makeUrl('')}}js/scroll_loading.js"></script>
         <script>
-            tinymce.init({ 
-                selector: 'textarea',
-                height: 300,
-                menubar: false,
-                plugins: [
-                'advlist autolink lists link image charmap print preview anchor',
-                'searchreplace visualblocks code fullscreen',
-                'insertdatetime media table contextmenu paste code textcolor'
-                ],
-                toolbar: 'undo redo | insert | styleselect | bold underline italic | alignleft aligncenter alignright alignjustify | outdent indent | link image | forecolor backcolor',
-                content_css: '//www.tinymce.com/css/codepen.min.css',
-                image_dimensions: false,
-            });
+        $(document).ready(function(e) {
+            $(".post_image").scrollLoading();
+        });
         </script>
-    @endif
 @endsection

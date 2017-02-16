@@ -7,9 +7,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta content="telephone=no" name="format-detection"/>
     <link rel="apple-touch-icon-precomposed" href="{{makeUrl('')}}favicon.ico">
-	<link rel="icon" href="{{makeUrl('')}}favicon.ico" type="image/x-icon">
+	<link rel="icon" href="{{makeUrl('')}}favicon.ico type="image/x-icon">
     <div id="wx_pic" style="margin:0 auto;display:none;">
-		<img src="{{makeUrl('')}}favicon.ico" />
+		<img src="{{makeUrl('')}}wecon.jpg" />
 	</div>
     
     <!--Stylesheets-->
