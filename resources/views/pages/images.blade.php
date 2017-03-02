@@ -78,7 +78,7 @@
                         <td>{{date('Y/n/j G:i', strtotime($row->created_at))}}</td>
                         <td>
                         	<a href="/{{$row->link}}" class="btn waves-effect waves-light blue no-shadow"><i class="material-icons">system_update_alt</i></a>
-                          <button class="btn waves-effect waves-light orange no-shadow" id="file_{{$row->id}}" onClick="delete_confirmation(this.id,'/post_images/delete/'"><i class="material-icons">delete</i></button>
+                          <button class="btn waves-effect waves-light orange no-shadow" id="file_{{$row->id}}" onClick="delete_confirmation(this.id,'/post_images/delete/')"><i class="material-icons">delete</i></button>
                         </td>
                     </tr>
                 @endforeach
