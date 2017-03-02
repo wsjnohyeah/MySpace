@@ -12,7 +12,7 @@
 
 	@if($logged)
 	<div class="row post-card">
-		<form action="{{makeUrl('post/edit')}}" method="post" accept-charset="utf-8">
+		<form action="/post/edit" method="post" accept-charset="utf-8">
     	{{ csrf_field() }}
     	<input type="hidden" name="id" value="{{$post->id}}">
         <div class="col s12 m10 push-m1">
@@ -33,7 +33,7 @@
                      <button class="btn waves-effect waves-light blue" type="submit" name="action">Edit
                      	 <i class="material-icons right">send</i>
                      </button>
-                     <a class="btn waves-effect waves-light orange no-shadow" id="post_{{$post->id}}" onClick="delete_confirmation(this.id,'{{makeUrl('post/delete/')}}')"><i class="material-icons">delete</i></a>
+                     <a class="btn waves-effect waves-light orange no-shadow" id="post_{{$post->id}}" onClick="delete_confirmation(this.id,'/post/delete/')"><i class="material-icons">delete</i></a>
                  </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
 @endsection
 
 @section('scripts')
-        <script type="text/javascript" src="{{makeUrl('')}}js/scroll_loading.js"></script>
+        <script type="text/javascript" src="/js/scroll_loading.js"></script>
         <script>
         $(document).ready(function(e) {
             $(".post_image").scrollLoading();

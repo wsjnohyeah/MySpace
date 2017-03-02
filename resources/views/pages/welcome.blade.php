@@ -14,7 +14,7 @@
     </div>
     
     @if($logged)
-    <form action="{{makeUrl('post/save')}}" method="post" accept-charset="utf-8">
+    <form action="/post/save" method="post" accept-charset="utf-8">
     {{ csrf_field() }}
     <div class="row post-card">
         <div class="col s12 m10 push-m1">
@@ -46,7 +46,7 @@
     @foreach($post as $row)
         <div class="row">
             <div class="col s12 m10 push-m1">
-                <div class="card content-card pointer" onclick="location.href='{{makeUrl('post/'.$row->id)}}'">
+                <div class="card content-card pointer" onclick="location.href='/post/{{$row->id}}'">
                     <div class="card-content">
                         <div class="row">
                         	<div class="col s7 m8 l10 flow-text white-text">{{$row->title}}</div>

@@ -14,7 +14,7 @@
             </div>
         </div>
         
-        <form action="{{makeUrl('drive/verify')}}" method="post" accept-charset="utf-8">
+        <form action="/drive/verify" method="post" accept-charset="utf-8">
             {{ csrf_field() }}
             <div class="row">
             	<div class="col s12 m10 push-m1">

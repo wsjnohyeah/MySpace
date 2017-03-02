@@ -9,10 +9,6 @@ use Illuminate\Support\Facades\Input;
 
 
 class PostController extends Controller{
-
-	public function test(){
-		echo route('/');
-	}
 	
 	public function index(Request $request){
 		$data['logged'] = $request->session()->get('logged');

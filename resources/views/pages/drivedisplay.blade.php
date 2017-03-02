@@ -25,14 +25,14 @@
                          	 <p>You have been verified. Click to Sign out for security.</p>
                         </div>
                         <div class="card-action">
-                             <button class="btn waves-effect waves-light red lighten-2 no-shadow" type="submit" name="action" onClick="location.href='{{makeUrl('drive/signout')}}'">Sign Out</button>
-                             <button class="btn waves-effect waves-light grey darken-2 no-shadow" type="submit" name="action" onClick="location.href='{{makeUrl('post_images')}}'">Access Post Image Drive</button>
+                             <button class="btn waves-effect waves-light red lighten-2 no-shadow" type="submit" name="action" onClick="location.href='/drive/signout'">Sign Out</button>
+                             <button class="btn waves-effect waves-light grey darken-2 no-shadow" type="submit" name="action" onClick="location.href='/post_images'">Access Post Image Drive</button>
                         </div>
                 	</div>
                 </div>
             </div>
                 
-            <form action="{{makeUrl('do_upload')}}" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+            <form action="do_upload" enctype="multipart/form-data" method="post" accept-charset="utf-8">
             {{ csrf_field() }}
             <div class="row">
             	<div class="col s12 m10 push-m1">
@@ -77,8 +77,8 @@
                         <td>{{$row->size}}</td>
                         <td>{{date('Y/n/j G:i', strtotime($row->created_at))}}</td>
                         <td>
-                        	<a href="{{makeUrl($row->link)}}" class="btn waves-effect waves-light blue no-shadow"><i class="material-icons">system_update_alt</i></a>
-                          <button class="btn waves-effect waves-light orange no-shadow" id="file_{{$row->id}}" onClick="delete_confirmation(this.id,'{{makeUrl('drive/delete/')}}')"><i class="material-icons">delete</i></button>
+                        	<a href="/{{$row->link}}" class="btn waves-effect waves-light blue no-shadow"><i class="material-icons">system_update_alt</i></a>
+                          <button class="btn waves-effect waves-light orange no-shadow" id="file_{{$row->id}}" onClick="delete_confirmation(this.id,'/drive/delete/')"><i class="material-icons">delete</i></button>
                         </td>
                     </tr>
                 @endforeach
