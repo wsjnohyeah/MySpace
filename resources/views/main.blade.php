@@ -41,9 +41,9 @@
         @yield("content") 
     </main>
     
+    <div class="place-holder hide-on-small-only"></div>
     
-    
-    <footer class="page-footer grey darken-4" id="footer">
+    <footer class="page-footer grey darken-4 no-margin" id="footer">
     	<div class="container">
         	<div class="col l6 s12">
             	<h5 class="grey-text text-lighten-2">Hello~</h5>

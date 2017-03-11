@@ -41,9 +41,9 @@
     </div>
     @endif
 
-    <div class="row">
-        <div class="col s12 m10 push-m1">
-            <div class="card content-card">
+    <div class="row no-margin">
+        <div class="col s12 m10 push-m1 no-padding">
+            <div class="card content-card no-margin">
                 <div class="card-content">
                     <div class="row post-title">
                     	<h5 class="col s12 white-text">{{$post->title}}</h5>
