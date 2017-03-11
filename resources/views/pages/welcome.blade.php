@@ -16,7 +16,7 @@
     @if($logged)
     <form action="/post/save" method="post" accept-charset="utf-8">
     {{ csrf_field() }}
-    <div class="row post-card">
+    <div class="row">
         <div class="col s12 m10 push-m1">
         	<div class="card content-card">
             	 <div class="card-content">
@@ -48,11 +48,12 @@
             <div class="col s12 m10 push-m1">
                 <div class="card content-card pointer" onclick="location.href='/post/{{$row->id}}'">
                     <div class="card-content">
-                        <div class="row">
-                        	<div class="col s7 m8 l10 flow-text white-text">{{$row->title}}</div>
-                            <div class="col s5 m4 l2"><p class="right green-text text-lighten-3">{{date('Y/n/j G:i', strtotime($row->created_at))}}</p></div>
+                        <div class="row content-title">
+                        	<div class="col s12 flow-text white-text">{{$row->title}}</div>
                         </div>
-                        <p align="left" class="blue-text text-lighten-3">[Click on the card to view the full article]</p>
+                        <div class="row no-margin">
+                            <p class="col s12 green-text text-lighten-3">Created at {{date('Y/n/j G:i', strtotime($row->created_at))}}</p>
+                        </div>
                     </div>
                 </div>
             </div>

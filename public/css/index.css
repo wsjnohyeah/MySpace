@@ -37,6 +37,11 @@ main{
 	max-width: 100%;
 	max-height: 100%;
 }
+
+.content-title{
+	margin-bottom: 0.5rem;
+}
+
 .no-shadow{
 	box-shadow:none;
 }
@@ -45,8 +50,20 @@ main{
 	height: 2rem;
 }
 
+.no-margin{
+	margin:0 !important;
+}
+
+.no-padding{
+	padding:0 !important;
+}
+
 .pointer{
 	cursor: pointer;
+}
+
+.post-title{
+	margin-bottom: 1.5rem;
 }
 
 /*Used in Error Pages*/

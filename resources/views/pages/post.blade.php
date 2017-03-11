@@ -8,10 +8,10 @@
 
 @section('content')
 <div>
-	<div class='place-holder'></div>
+	<div class='place-holder hide-on-small-only'></div>
 
 	@if($logged)
-	<div class="row post-card">
+	<div class="row">
 		<form action="/post/edit" method="post" accept-charset="utf-8">
     	{{ csrf_field() }}
     	<input type="hidden" name="id" value="{{$post->id}}">
@@ -45,10 +45,10 @@
         <div class="col s12 m10 push-m1">
             <div class="card content-card">
                 <div class="card-content">
-                    <div class="row">
-                    	<div class="col s12 flow-text white-text">{{$post->title}}</div>
+                    <div class="row post-title">
+                    	<h5 class="col s12 white-text">{{$post->title}}</h5>
                     </div>
-                    <div align="justify" class="white-text">{!! processPost($post->content) !!}</div>
+                    <div align="left" class="white-text">{!! processPost($post->content) !!}</div>
                     <br>
                    	<p align="right" class="green-text text-lighten-3">Last updated at {{date('Y/n/j G:i', strtotime($post->updated_at))}}</p>
                 </div>
