@@ -46,7 +46,7 @@
     @foreach($post as $row)
         <div class="row">
             <div class="col s12 m10 push-m1">
-                <div class="card content-card pointer" onclick="location.href='/post/{{$row->id}}'">
+                <div class="card content-card pointer no-margin" onclick="location.href='/post/{{$row->id}}'">
                     <div class="card-content">
                         <div class="row content-title">
                         	<div class="col s12 flow-text white-text">{{$row->title}}</div>
