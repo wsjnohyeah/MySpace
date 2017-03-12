@@ -6,7 +6,7 @@ function processPost($str, $attributes = array()) {
 		$attrs .= " {$attribute}=\"{$value}\"";
 	}
 	
-	$str = str_replace("[img]","<img style='max-width:100%;' class='post_image' src='/wecon.jpg' data-url='",$str);
+	$str = str_replace("[img]","<img style='max-width:100%;' class='post_image' src='/images/blank.png' data-url='",$str);
 	$str = str_replace("[/img]","'>",$str);
 	
 	$str = ' '.$str;

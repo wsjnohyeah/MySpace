@@ -54,7 +54,7 @@
         <div class="row post-card">
           <div class="card medium col s12 m10 push-m1 l8 push-l2 no-padding">
                 <div class="card-image">
-                  <img src="{{$post->image}}" alt="sample">
+                  <img class="post-image-title" src="/images/blank.png" data-url="{{$post->image}}">
                   <span class="card-title">{{$post->title}}</span>
                 </div>
                 <div class="card-content">
@@ -89,4 +89,13 @@
     @endforeach
 
 </div>
+@endsection
+
+@section('scripts')
+        <script type="text/javascript" src="/js/scroll_loading.js"></script>
+        <script>
+        $(document).ready(function(e) {
+            $(".post-image-title").scrollLoading();
+        });
+        </script>
 @endsection

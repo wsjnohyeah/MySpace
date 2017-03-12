@@ -12,6 +12,10 @@ main{
     flex: 1 0 auto;
 }
 
+blockquote{
+	border-color: #2196f3 !important;
+}
+
 #footer{
 	opacity: 0.95;
 }
