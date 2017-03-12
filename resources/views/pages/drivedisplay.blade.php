@@ -20,13 +20,13 @@
             
             <div class="row">
             	<div class="col s12 m10 push-m1">
-            		<div class="card grey lighten-3 content-card">
+            		<div class="card">
                     	<div class="card-content">
                          	 <p>You have been verified. Click to Sign out for security.</p>
                         </div>
                         <div class="card-action">
                              <button class="btn waves-effect waves-light red lighten-2 no-shadow" type="submit" name="action" onClick="location.href='/drive/signout'">Sign Out</button>
-                             <button class="btn waves-effect waves-light grey darken-2 no-shadow" type="submit" name="action" onClick="location.href='/post_images'">Access Post Image Drive</button>
+                             <button class="btn waves-effect waves-light grey darken-2 no-shadow" type="submit" name="action" onClick="location.href='/post_images'">Post Image</button>
                         </div>
                 	</div>
                 </div>
@@ -36,7 +36,7 @@
             {{ csrf_field() }}
             <div class="row">
             	<div class="col s12 m10 push-m1">
-                	<div class="card grey lighten-3 content-card">
+                	<div class="card">
                     	 <div class="card-content">
                              <span class="card-title">Upload a file to the drive</span>
                          	 <div class="file-field input-field">

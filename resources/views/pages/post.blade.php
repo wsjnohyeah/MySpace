@@ -18,16 +18,28 @@
         <div class="col s12 m10 push-m1">
         	<div class="card content-card">
             	 <div class="card-content">
-                 	 <span class="card-title white-text">Edit Post</span>
+                 	 <span class="card-title error/custom">Edit Post</span>
                  	 <div class="row">
                      	 <div class="input-field col s12">
-                         	 <input type="text" name="title" class="validate white-text" id="post-title" value="{{$post->title}}">
+                         	 <input type="text" name="title" class="validate error/custom" id="post-title" value="{{$post->title}}">
         						 <label class="active" >Title</label>
                          </div>
                          <div class="input-field col s12">
-                            <textarea class="materialize-textarea white-text" name="content" id="post-content">{!!$post->content!!}</textarea>
+                             <input type="text" name="image" class="validate " id="post-image" value="{{$post->image}}">
+                                 <label class="active" >Background Image</label>
+                         </div>
+                         <div class="input-field col s12">
+                             <input type="text" name="intro" class="validate " id="post-intro" value="{{$post->intro}}">
+                                 <label class="active" >Introduction</label>
+                         </div>
+                         <div class="input-field col s12">
+                             <input type="text" name="author" class="validate " id="post-author" value="{{$post->author}}">
+                                 <label class="active" >Author</label>
+                        </div>
+                         <div class="input-field col s12">
+                            <textarea class="materialize-textarea error/custom" name="content" id="post-content">{!!$post->content!!}</textarea>
                             <label>Content</label>                     
-                        </div>	
+                        </div>
                  </div>
                  <div class="card-action">
                      <button class="btn waves-effect waves-light blue" type="submit" name="action">Edit
@@ -42,15 +54,15 @@
     @endif
 
     <div class="row no-margin">
-        <div class="col s12 m10 push-m1 no-padding">
-            <div class="card content-card no-margin">
+        <div class="col s12 m10 push-m1">
+            <div class="card content-card">
                 <div class="card-content">
                     <div class="row post-title">
-                    	<h5 class="col s12 white-text">{{$post->title}}</h5>
+                        <p class="grey-text">Last updated at {{date('Y/n/j', strtotime($post->updated_at))}}</p>
+                    	<h5 class="col s12 error/custom">{{$post->title}}</h5>
                     </div>
-                    <div align="left" class="white-text">{!! processPost($post->content) !!}</div>
+                    <div align="left" class="error/custom">{!! processPost($post->content) !!}</div>
                     <br>
-                   	<p align="right" class="green-text text-lighten-3">Last updated at {{date('Y/n/j G:i', strtotime($post->updated_at))}}</p>
                 </div>
             </div>
         </div>

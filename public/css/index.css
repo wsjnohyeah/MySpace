@@ -3,7 +3,6 @@ body{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-	background: url(../images/background.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -22,24 +21,18 @@ main{
 /***/
 
 #nav-bar{
-	box-shadow: none;
-	opacity:0.95;
 	z-index:999;
 }
 .file-card{
 	cursor:pointer;
 }
-.content-card{
-	box-shadow:none;
-	background: rgba(66,66,66,0.9);
-}
-.content-card img{
-	max-width: 100%;
-	max-height: 100%;
+
+.post-card{
+	margin:0 0.5rem;
 }
 
-.content-title{
-	margin-bottom: 0.5rem;
+.post-title p{
+	line-height: 2rem;
 }
 
 .no-shadow{

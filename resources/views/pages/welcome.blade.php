@@ -6,13 +6,8 @@
 
 @section('content')
 <div>
-
-    <div class="row" id="message">
-        <div class="col s12 center">
-            <h4 class="white-text">Welcome to my Blog 😉</h4>
-        </div>
-    </div>
     
+    <div class="place-holder hide-on-small-only"></div>
     @if($logged)
     <form action="/post/save" method="post" accept-charset="utf-8">
     {{ csrf_field() }}
@@ -20,14 +15,26 @@
         <div class="col s12 m10 push-m1">
         	<div class="card content-card">
             	 <div class="card-content">
-                 	 <span class="card-title white-text">Post some thoughts?</span>
+                 	 <span class="card-title ">Post some thoughts?</span>
                  	 <div class="row">
                      	 <div class="input-field col s12">
-                         	 <input type="text" name="title" class="validate white-text" id="post-title">
+                         	 <input type="text" name="title" class="validate " id="post-title">
         						 <label class="active" >Title</label>
                          </div>
                          <div class="input-field col s12">
-                         	 <textarea class="materialize-textarea white-text" name="content" id="post-content"></textarea>
+                             <input type="text" name="image" class="validate " id="post-image">
+                                 <label class="active" >Background Image</label>
+                         </div>
+                         <div class="input-field col s12">
+                             <input type="text" name="intro" class="validate " id="post-intro">
+                                 <label class="active" >Introduction</label>
+                         </div>
+                         <div class="input-field col s12">
+                             <input type="text" name="author" class="validate " id="post-author">
+                                 <label class="active" >Author</label>
+                         </div>
+                         <div class="input-field col s12">
+                         	 <textarea class="materialize-textarea " name="content" id="post-content"></textarea>
                              <label>Content</label>
                          </div>
                      </div>	
@@ -43,13 +50,33 @@
     </form>
     @endif
 
-    @foreach($post as $row)
+    @foreach($post as $post)
+        <div class="row post-card">
+          <div class="card medium col s12 m10 push-m1 l8 push-l2 no-padding">
+                <div class="card-image">
+                  <img src="{{$post->image}}" alt="sample">
+                  <span class="card-title">{{$post->title}}</span>
+                </div>
+                <div class="card-content">
+                  <p class="grey-text darken-1">{{date('Y/n/j', strtotime($post->created_at))}}</p>
+                  <p>{{$post->intro}}</p>
+
+                </div>
+                <div class="card-action">
+                  By <span class="blue-text">{{$post->author}}</span>
+                  <a href="/post/{{$post->id}}" class="right blue-text">Read more...</a>
+                </div>
+          </div>
+        </div>
+
+
+        {{--
         <div class="row">
             <div class="col s12 m10 push-m1">
                 <div class="card content-card pointer no-margin" onclick="location.href='/post/{{$row->id}}'">
                     <div class="card-content">
                         <div class="row content-title">
-                        	<div class="col s12 flow-text white-text">{{$row->title}}</div>
+                        	<div class="col s12 flow-text ">{{$row->title}}</div>
                         </div>
                         <div class="row no-margin">
                             <p class="col s12 green-text text-lighten-3">Created at {{date('Y/n/j G:i', strtotime($row->created_at))}}</p>
@@ -58,6 +85,7 @@
                 </div>
             </div>
         </div>
+        --}}
     @endforeach
 
 </div>

@@ -21,7 +21,7 @@
 </head>
 
 <body>
-	<nav class="black" id="nav-bar">
+	<nav class="cyan" id="nav-bar">
     	<div class="nav-wrapper container">
         	<a href="#" class="brand-logo white-text">@yield('logo')</a>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons white-text">menu</i></a>
@@ -32,7 +32,7 @@
         </div>
 	</nav>
 
-    <ul id="nav-mobile" class="side-nav grey darken-4">
+    <ul id="nav-mobile" class="side-nav cyan darken-1">
         <li><a href="/" class="white-text">Home</a></li>
         <li><a href="/drive" class="white-text">Drive</a></li>
     </ul>
@@ -43,16 +43,16 @@
     
     <div class="place-holder hide-on-small-only"></div>
     
-    <footer class="page-footer grey darken-4 no-margin" id="footer">
+    <footer class="page-footer cyan no-margin" id="footer">
     	<div class="container">
         	<div class="col l6 s12">
-            	<h5 class="grey-text text-lighten-2">Hello~</h5>
-            	<p class="grey-text text-lighten-2">I'm Ethan. I love technology; I love programming. </p>
+            	<h5 class="white-text">Hello~</h5>
+            	<p class="white-text">I'm Ethan. I love technology; I love programming. </p>
         	</div>
         </div>
         
-        <div class="footer-copyright black" id="copyright">
-        	<div class="container grey-text text-lighten-2">
+        <div class="footer-copyright cyan darken-1" id="copyright">
+        	<div class="container white-text">
             	© 2017 Ethan Hu "hqc"
             </div>
         </div>

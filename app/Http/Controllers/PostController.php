@@ -27,9 +27,15 @@ class PostController extends Controller{
 			date_default_timezone_set("Etc/GMT-8");
 			$title = Input::get('title');
 			$content = Input::get('content');
+			$author = Input::get('author');
+			$intro = Input::get('intro');
+			$image = Input::get('image');
 			Posts::create([
 				'title' => $title,
-				'content' => $content
+				'content' => $content,
+				'author' => $author,
+				'intro' => $intro,
+				'image' => $image,
 			]);
 		}
 		return redirect('/');
@@ -41,10 +47,16 @@ class PostController extends Controller{
 			$id = Input::get('id');
 			$title = Input::get('title');
 			$content = Input::get('content');
+			$author = Input::get('author');
+			$intro = Input::get('intro');
+			$image = Input::get('image');
 			
 			Posts::where('id',$id)->update([
 				'title' => $title,
-				'content' => $content
+				'content' => $content,
+				'author' => $author,
+				'intro' => $intro,
+				'image' => $image,
 			]);
 		}
 		return redirect('post/'.$id);
