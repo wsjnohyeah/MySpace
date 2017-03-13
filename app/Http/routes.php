@@ -16,13 +16,13 @@
  */
 Route::get('/', 'PostController@index');
 
-Route::get('post/{id}','PostController@getPost');
+Route::get('/post/{id}','PostController@getPost');
 
-Route::post('post/save','PostController@savePost');
+Route::post('/post/save','PostController@savePost');
 
-Route::post('post/edit','PostController@editPost');
+Route::post('/post/edit','PostController@editPost');
 
-Route::get('post/delete/{id}','PostController@deletePost');
+Route::get('/post/delete/{id}','PostController@deletePost');
 
 /**/
 
@@ -30,27 +30,31 @@ Route::get('post/delete/{id}','PostController@deletePost');
 /*
  * Drive Handlers
  */
-Route::get('drive', 'DriveController@index');
+Route::get('/drive', 'DriveController@index');
 
-Route::post('drive/verify','DriveController@verify');
+Route::post('/drive/verify','DriveController@verify');
 
-Route::get('drive/signout','DriveController@signout');
+Route::get('/drive/signout','DriveController@signout');
 
-Route::post('do_upload','DriveController@do_upload');
+Route::post('/do_upload','DriveController@do_upload');
 
-Route::get('drive/delete/{id}','DriveController@delete');
+Route::get('/drive/delete/{id}','DriveController@delete');
 /**/
 
 /*
  * Image Handlers
  */
-Route::get('post_images', 'ImageController@index');
+Route::get('/post_images', 'ImageController@index');
 
-Route::get('post_images/delete/{id}', 'ImageController@delete');
+Route::get('/post_images/delete/{id}', 'ImageController@delete');
 
-Route::post('post_images/do_upload', 'ImageController@do_upload');
+Route::post('/post_images/do_upload', 'ImageController@do_upload');
 
 /**/
+
+Route::get('/about',function(){
+	return view('pages.about');
+});
 
 /*
  * Error Handlers

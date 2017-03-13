@@ -1,8 +1,8 @@
 @extends('main')
 
-@section('title','Welcome')
+@section('title','Welcome - Ethanian')
 
-@section('logo','Ethanian - Space')
+@section('logo','Ethanian')
 
 @section('content')
 <div>

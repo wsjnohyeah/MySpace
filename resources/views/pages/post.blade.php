@@ -18,10 +18,10 @@
         <div class="col s12 m10 push-m1">
         	<div class="card content-card">
             	 <div class="card-content">
-                 	 <span class="card-title error/custom">Edit Post</span>
+                 	 <span class="card-title ">Edit Post</span>
                  	 <div class="row">
                      	 <div class="input-field col s12">
-                         	 <input type="text" name="title" class="validate error/custom" id="post-title" value="{{$post->title}}">
+                         	 <input type="text" name="title" class="validate " id="post-title" value="{{$post->title}}">
         						 <label class="active" >Title</label>
                          </div>
                          <div class="input-field col s12">
@@ -37,7 +37,7 @@
                                  <label class="active" >Author</label>
                         </div>
                          <div class="input-field col s12">
-                            <textarea class="materialize-textarea error/custom" name="content" id="post-content">{!!$post->content!!}</textarea>
+                            <textarea class="materialize-textarea " name="content" id="post-content">{!!$post->content!!}</textarea>
                             <label>Content</label>                     
                         </div>
                  </div>
@@ -59,9 +59,9 @@
                 <div class="card-content">
                     <div class="row post-title">
                         <p class="grey-text">Last updated at {{date('Y/n/j', strtotime($post->updated_at))}}</p>
-                    	<h5 class="col s12 error/custom">{{$post->title}}</h5>
+                    	<h5 class="col s12">{{$post->title}}</h5>
                     </div>
-                    <div align="left" class="error/custom">{!! processPost($post->content) !!}</div>
+                    <div align="left">{!! processPost($post->content) !!}</div>
                     <br>
                 </div>
             </div>

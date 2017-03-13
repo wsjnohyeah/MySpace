@@ -71,3 +71,7 @@ blockquote{
 	border-radius: 4px 4px 0 0;
 	height:0.8rem;
 }
+.about-intro i{
+	position: relative;
+	top:0.4rem;
+}
