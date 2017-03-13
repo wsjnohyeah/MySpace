@@ -35,7 +35,11 @@
                 <div class="row"></div>
                 <div class="row">
                 	<div class="col s10 push-s1">
-						<h5>{{$error}}</h5>
+						@if(empty($exception->getMessage()))
+                            <h5 align="center">404: This Page doesn't exist</h5>
+                        @else
+                            <h5 align="center">{{$exception->getMessage()}}</h5>
+                        @endif
 					</div>
                 </div>
                 <div class="row"></div>
