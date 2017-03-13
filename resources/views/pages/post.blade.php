@@ -37,7 +37,7 @@
                                  <label class="active" >Author</label>
                         </div>
                          <div class="input-field col s12">
-                            <textarea class="materialize-textarea " name="content" id="post-content">{!!$post->content!!}</textarea>
+                            <textarea class="materialize-textarea " name="content" id="post-content">{!!processPostEdit($post->content)!!}</textarea>
                             <label>Content</label>                     
                         </div>
                  </div>

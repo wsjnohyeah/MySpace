@@ -18,3 +18,9 @@ function processPost($str, $attributes = array()) {
 	
 	return $str;
 }
+
+function processPostEdit($str){
+	$str = str_replace("&lt;","&amp;lt;",$str);
+	$str = str_replace("&gt;","&amp;gt;",$str);
+	return $str;
+}
