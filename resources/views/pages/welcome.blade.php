@@ -55,7 +55,7 @@
           <div class="card medium col s12 m10 push-m1 l8 push-l2 no-padding">
                 <div class="card-image">
                   <img class="post-image-title" src="/images/blank.png" data-url="{{$post->image}}">
-                  <span class="card-title">{{$post->title}}</span>
+                  <span class="card-title">{!! $post->title !!}</span>
                 </div>
                 <div class="card-content">
                   <p class="grey-text darken-1">{{date('Y/n/j', strtotime($post->created_at))}}</p>
