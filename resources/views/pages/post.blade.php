@@ -59,7 +59,7 @@
                 <div class="card-content">
                     <div class="row post-title">
                         <p class="grey-text">Last updated at {{date('Y/n/j', strtotime($post->updated_at))}}</p>
-                    	<h5 class="col s12">{{$post->title}}</h5>
+                    	<h5 class="col s12">{!! $post->title !!}</h5>
                     </div>
                     <div align="left">{!! processPost($post->content) !!}</div>
                     <br>
