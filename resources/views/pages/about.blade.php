@@ -15,15 +15,15 @@
             <div class="card content-card">
                 <div class="card-content">
                     <div class="row post-title">
-                        <p class="grey-text">Last updated at 2017/4/2</p>
+                        <p class="grey-text">Last updated at 2017/8/19</p>
                     	<h5 class="col s12">About Me</h5>
                     </div>
                     <div align="left" class="about-intro">
                         <blockquote>
-                            <li>High school <span class="blue-text">Senior</span>, <span class="red-text">Cornell University</span> Class of 2021 </li><br>
+                            <li><span class="red-text">Cornell University</span> Class of 2021 </li><br>
                             <li>Programming Ethusiast <i class="material-icons green-text">code</i></li><br>
                             <li>Web Front&amp;Back-end, Java, iOS(with Swift) <i class="material-icons orange-text">phone_iphone</i></li><br>
-                            <li><span class="red-text">Canton, CHN</span><i class="material-icons grey-text">location_on</i></li><br>
+                            <li><span class="red-text">Ithaca, NY(Cornell University) USA</span><i class="material-icons grey-text">location_on</i></li><br>
                             <li>Contact: <a href="mailto:hi@ethanhu.me">hi@ethanhu.me</a> <i class="material-icons grey-text">contact_mail</i></li>
                         </blockquote>
                         <br>
