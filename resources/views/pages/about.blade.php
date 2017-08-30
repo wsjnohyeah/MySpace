@@ -31,7 +31,7 @@
                         <blockquote>
                             <li>Creator: School Info Sharing Site "NoticeBoard 1 &amp; 2" : <a href="http://hfinotice.com">http://hfinotice.com</a></li>
                             <br>
-                            <li>Particapating in "NoticeBoard 3" : <a href="https://hfi.me">https://hfi.me</a></li>
+                            <li>Particapating in "NoticeBoard 3" : <a href="https://hfi.me">https://account.hfi.me</a></li>
                             <br>
                             <li>iOS App: CardGames ScoreBoard [a replacement for paper scoreboards when playing card games among friends]<br>
                                 GET IT ON THE APPSTORE!<br>
