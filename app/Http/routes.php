@@ -11,6 +11,9 @@
 |
 */
 
+use App\Models\Posts;
+use Illuminate\Http\Request;
+
 /*
  * Post Handlers
  */
@@ -52,8 +55,10 @@ Route::post('/post_images/do_upload', 'ImageController@do_upload');
 
 /**/
 
-Route::get('/about',function(){
-	return view('pages.about');
+Route::get('/about',function(Request $request){
+	$aboutArticle = Posts::where('title','About Me')->first();
+	return view('pages.about')->withPost($aboutArticle)
+							  ->withLogged($request->session()->get('logged'));;
 });
 
 /*

@@ -12,7 +12,7 @@ class PostController extends Controller{
 	
 	public function index(Request $request){
 		$data['logged'] = $request->session()->get('logged');
-		$data['post'] = Posts::orderBy('id','desc')->get();
+		$data['post'] = Posts::where('title','!=','About Me')->orderBy('id','desc')->get();
 		return view('pages.welcome')->with($data);
 	}
 	
