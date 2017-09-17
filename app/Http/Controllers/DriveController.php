@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Files;
+use App\Models\Users;
 
 use Storage;
 use Illuminate\Support\Facades\Input;
@@ -24,7 +25,7 @@ class DriveController extends Controller{
 	
 	public function verify(Request $request){
 		$password = Input::get('password');
-		if($password == '926479'){
+		if($password == Users::where('username','Ethan')->first()->password){
 			$request->session()->put('logged', 'true');
 		}
 		return redirect('drive');
