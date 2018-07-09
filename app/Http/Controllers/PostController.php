@@ -38,7 +38,7 @@ class PostController extends Controller{
 				'image' => $image,
 			]);
 		}
-		return redirect('/');
+		return redirect('/posts');
 	}
 
 	public function editPost(Request $request){
@@ -66,7 +66,7 @@ class PostController extends Controller{
 		if($request->session()->get('logged')){
 			Posts::find($id)->delete();
 		}
-		return redirect('/');
+		return redirect('/posts');
 	}
 
 }

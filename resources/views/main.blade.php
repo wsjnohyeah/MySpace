@@ -26,17 +26,15 @@
         	<a href="#" class="brand-logo white-text">@yield('logo')</a>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons white-text">menu</i></a>
             <ul class="right hide-on-med-and-down">
-             	<li><a href="/" class="white-text">Home</a></li>
-            	<li><a href="/drive" class="white-text">Drive</a></li>
-                <li><a href="/about" class="white-text">About</a></li>
+             	<li><a href="/posts" class="white-text">Posts</a></li>
+                <li><a href="/" class="white-text">About</a></li>
             </ul>
         </div>
 	</nav>
 
     <ul id="nav-mobile" class="side-nav cyan darken-1">
-        <li><a href="/" class="white-text">Home</a></li>
-        <li><a href="/drive" class="white-text">Drive</a></li>
-        <li><a href="/about" class="white-text">About</a></li>
+        <li><a href="/posts" class="white-text">Posts</a></li>
+        <li><a href="/" class="white-text">About</a></li>
     </ul>
     
     <main>
@@ -55,7 +53,7 @@
         
         <div class="footer-copyright cyan darken-1" id="copyright">
         	<div class="container white-text">
-            	© 2017 Ethan Hu "hqc"
+            	© 2018 Ethan Hu "hqc"
             </div>
         </div>
     </footer>

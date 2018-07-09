@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 /*
  * Post Handlers
  */
-Route::get('/', 'PostController@index');
+Route::get('/posts', 'PostController@index');
 
 Route::get('/post/{id}','PostController@getPost');
 
@@ -55,10 +55,15 @@ Route::post('/post_images/do_upload', 'ImageController@do_upload');
 
 /**/
 
-Route::get('/about',function(Request $request){
+Route::get('/',function(Request $request){
 	$aboutArticle = Posts::where('title','About Me')->first();
 	return view('pages.about')->withPost($aboutArticle)
 							  ->withLogged($request->session()->get('logged'));;
+});
+Route::get('/about',function(Request $request){
+    $aboutArticle = Posts::where('title','About Me')->first();
+    return view('pages.about')->withPost($aboutArticle)
+        ->withLogged($request->session()->get('logged'));;
 });
 
 /*
