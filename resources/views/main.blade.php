@@ -26,7 +26,6 @@
         	<a href="#" class="brand-logo white-text">@yield('logo')</a>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons white-text">menu</i></a>
             <ul class="right hide-on-med-and-down">
-             	<li><a href="/posts" class="white-text">Posts</a></li>
                 <li><a href="/" class="white-text">About</a></li>
             </ul>
         </div>
