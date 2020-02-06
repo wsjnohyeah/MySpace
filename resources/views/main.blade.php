@@ -32,7 +32,6 @@
 	</nav>
 
     <ul id="nav-mobile" class="side-nav cyan darken-1">
-        <li><a href="/posts" class="white-text">Posts</a></li>
         <li><a href="/" class="white-text">About</a></li>
     </ul>
     
@@ -42,20 +41,6 @@
     
     <div class="place-holder hide-on-small-only"></div>
     
-    <footer class="page-footer cyan no-margin" id="footer">
-    	<div class="container">
-        	<div class="col l6 s12">
-            	<h5 class="white-text">Hello~</h5>
-            	<p class="white-text">I'm Ethan. I love technology; I love programming. </p>
-        	</div>
-        </div>
-        
-        <div class="footer-copyright cyan darken-1" id="copyright">
-        	<div class="container white-text">
-            	© 2018 Ethan Hu "hqc"
-            </div>
-        </div>
-    </footer>
 </body>
 
 <!--Scripts-->
