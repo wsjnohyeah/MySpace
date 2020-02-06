@@ -1,10 +1,10 @@
 @extends('main')
 
 @section('title')
-    {{$post->title}} - Ethanian
+    Qichen Hu
 @endsection
 
-@section('logo','Ethanian - About')
+@section('logo','Qichen Hu')
 
 @section('content')
 <div>
